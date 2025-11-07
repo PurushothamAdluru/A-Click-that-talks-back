@@ -55,7 +55,7 @@ If you share how many users and your monthly print volume,
 I can confirm the best cost-efficient plan.
 
 You can also explore a quick 3D walkthrough here:
-https://my.spline.design/spline3dstarterfile-GGum3MrVqKm1QUATAtMKWOe3/
+[https://my.spline.design/spline3dstarterfile-GGum3MrVqKm1QUATAtMKWOe3/](https://my.spline.design/spline3dstarterfile-GGum3MrVqKm1QUATAtMKWOe3/)
 
 Would you like a 10-minute walkthrough?
 ```
