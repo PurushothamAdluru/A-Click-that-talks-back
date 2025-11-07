@@ -106,6 +106,3 @@ Data + Design + Automation Enthusiast
 📫 [LinkedIn](https://www.linkedin.com/in/purushothamraju) | 🌐 Fredericton, Canada
 
 ---
-
-Would you like me to include your *distorted "View Pricing"* image and *email screenshot* as visual sections (like an “Interaction Flow” diagram) right inside the README layout next?
-I can format it cleanly with `<img>` tags and proper spacing.
