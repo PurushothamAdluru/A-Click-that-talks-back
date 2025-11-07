@@ -79,7 +79,7 @@ Built with **Spline (free version)**
 Shows a **printer model** with floating text for ink optimization, cost-per-print, and AR-like perspective.
 
 **Preview:**
-![3D Printer](https://my.spline.design/spline3dstarterfile-GGum3MrVqKm1QUATAtMKWOe3/)
+https://my.spline.design/spline3dstarterfile-GGum3MrVqKm1QUATAtMKWOe3/
 
 ---
 
