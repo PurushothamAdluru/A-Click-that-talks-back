@@ -1,10 +1,3 @@
-Got it — let’s make a clean, story-driven **GitHub README.md** for your project “A Click That Talks Back.”
-It’ll read like something that stands out to recruiters and devs but is still easy for a 15-year-old to understand.
-
-Here’s the full draft (you can copy it straight into your repo):
-
----
-
 # 🖱️ A Click That Talks Back
 
 **An interactive automation experiment** that connects website user behavior to smart email workflows — powered by **Google Apps Script**, **Sheets**, and a **3D Spline demo**.
