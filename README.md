@@ -55,7 +55,7 @@ If you share how many users and your monthly print volume,
 I can confirm the best cost-efficient plan.
 
 You can also explore a quick 3D walkthrough here:
-[https://my.spline.design/spline3dstarterfile-GGum3MrVqKm1QUATAtMKWOe3/](https://my.spline.design/spline3dstarterfile-GGum3MrVqKm1QUATAtMKWOe3/)
+[https://my.spline.design/spline3dstarterfile-GGum3MrVqKm1QUATAtMKWOe3/]
 
 Would you like a 10-minute walkthrough?
 ```
@@ -79,7 +79,7 @@ Built with **Spline (free version)**
 Shows a **printer model** with floating text for ink optimization, cost-per-print, and AR-like perspective.
 
 **Preview:**
-![3D Printer](./sheet%205.png)
+![3D Printer](https://my.spline.design/spline3dstarterfile-GGum3MrVqKm1QUATAtMKWOe3/)
 
 ---
 
