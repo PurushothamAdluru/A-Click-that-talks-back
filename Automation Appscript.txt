@@ -1,0 +1,58 @@
+function doGet(e) {
+  try {
+    var email = (e.parameter.email || "").trim();
+    if (!email) return ContentService.createTextOutput("Missing email");
+
+    var ss = SpreadsheetApp.getActiveSpreadsheet();
+    var sh = ss.getSheetByName(""); // <-- change this
+    var data = sh.getDataRange().getValues();
+    if (data.length < 2) return ContentService.createTextOutput("No data");
+
+    // Map headers
+    var headers = data[0].map(function(h){ return (h+"").trim(); });
+    var idxEmail = headers.indexOf("Email");
+    var idxScore = headers.indexOf("Intent Score");
+    var idxAction = headers.indexOf("Last Action");
+    if (idxEmail === -1 || idxScore === -1 || idxAction === -1) {
+      return ContentService.createTextOutput("Missing required columns");
+    }
+
+    // Find row by Email
+    var rowIndex = -1;
+    for (var i = 1; i < data.length; i++) {
+      var cellEmail = (data[i][idxEmail] + "").trim();
+      if (cellEmail.toLowerCase() === email.toLowerCase()) {
+        rowIndex = i;
+        break;
+      }
+    }
+    if (rowIndex === -1) return ContentService.createTextOutput("Lead not found");
+
+    // Bump score + set action
+    var currentScore = Number(data[rowIndex][idxScore]) || 0;
+    var newScore = currentScore + 40;
+    sh.getRange(rowIndex + 1, idxScore + 1).setValue(newScore);
+    sh.getRange(rowIndex + 1, idxAction + 1).setValue("Viewed pricing page");
+
+    // Email the rep a “send-ready” draft
+    var rep = ""; // <-- change this
+    var subject = "Pricing interest — " + email + " — " + new Date().toISOString();
+    var splineLink = "https://my.spline.design/spline3dstarterfile-GGum3MrVqKm1QUATAtMKWOe3/"
+    var draft =
+      "Lead: " + email + "\n" +
+      "Action: Viewed pricing page\n" +
+      "Suggested reply:\n" +
+      "----------------\n" +
+      "Hi there,\n\n" +
+      "Noticed you were exploring pricing. If you share how many users and your typical monthly print volume, I can confirm the most cost-efficient plan and total monthly cost.\n\n" +
+      "You can also explore a quick 3D walkthrough here:\n" + splineLink + "\n\n" +
+      "Would you like a 10-minute walkthrough?\n\n" +
+      "Best,\n" +
+      "Your Name";
+    MailApp.sendEmail(rep, subject, draft);
+    Logger.log("Sent to: " + rep + " | Link: " + splineLink);
+    return ContentService.createTextOutput("OK");
+  } catch (err) {
+    return ContentService.createTextOutput("Error: " + err);
+  }
+}
